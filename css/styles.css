@@ -1,0 +1,23 @@
+#titulo {
+    background: black;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#barra_ppal {
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
