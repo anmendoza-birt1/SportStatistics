@@ -1,7 +1,16 @@
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+nav {
+    text-align: center;
+}
+
 #titulo {
     background: black;
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     margin: 0 auto;
 }
@@ -11,13 +20,58 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     margin: 0 auto;
+    
+        button {
+        background-color: blue;
+        color: white;
+        border-radius: 20px;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
 }
 
-button {
-    background-color: blue;
-    color: white;
+#barra_sec{
     border-radius: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     margin: 0 auto;
-    padding: 1.5rem;
+
+        button {
+        background-color: orange;
+        color: black;
+        border-radius: 20px;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
 }
+
+#barra_ter{
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin: 0 auto;
+
+        button {
+        background-color: grey;
+        color: black;
+        border-radius: 20px;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
