@@ -9,7 +9,4 @@ export function pintarEstadisticas(deportes, ligas, totalDatos) {
     document.getElementById('numLigas').textContent =
         ligas + ' ligas registradas';
 
-    document.getElementById('numDatos').textContent =
-        totalDatos + ' datos en total';
-
 }

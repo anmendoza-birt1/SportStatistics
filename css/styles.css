@@ -8,8 +8,7 @@ nav {
 }
 
 #titulo {
-    background: black;
-    color: white;
+    color: 172033;
     font-size: 4rem;
     text-align: center;
     margin: 0 auto;
@@ -44,8 +43,7 @@ nav {
         padding: 0.25rem;
         margin: 0;
         grid-column: 1 / -1;
-        border: solid white;
-        background-color: green;
+        background-color: #172033;
         border-radius: 20px;
         color: white;
         font-size: 2rem;
@@ -54,7 +52,7 @@ nav {
     p {
         padding: 10px;
         margin: 0;
-        background-color: green;
+        background-color: #172033;
         border-radius: 20px;
         color: white;
         font-size: 1.5rem;
@@ -69,8 +67,8 @@ nav {
     margin: 0 auto;
 
         button {
-        background-color: orange;
-        color: black;
+        background-color: olivedrab;
+        color: 172033;
         border-radius: 20px;
         justify-content: center;
         margin: 0 auto;
@@ -86,8 +84,8 @@ nav {
     margin: 0 auto;
 
         button {
-        background-color: grey;
-        color: black;
+        background-color: cadetblue;
+        color: white;
         border-radius: 20px;
         justify-content: center;
         margin: 0 auto;
@@ -177,9 +175,36 @@ footer {
 }
 
 #boton_reinicio {
+    margin-top: rem;
     border: solid red;
     background: orange;
     color: white;
     text-decoration: none;
     padding: 1rem;
+    border-radius: 20px;
+}
+
+#estadisticasEquipo {
+    margin: 2rem;
+    background: #172033;
+    display: grid;
+    padding: 0 auto;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 30px auto;
+    h2{
+        font-size: 2rem;
+        color: white;
+        font-weight: bolder;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: skyblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bolder;
+    }
+
 }

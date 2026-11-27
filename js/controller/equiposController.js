@@ -1,15 +1,11 @@
 
 'use strict';
 
-import { obtenerEquipos } from '../model/equipos.js';
+import { obtenerEquipos, obtenerEstadisticasEquipo } from '../model/equipos.js';
 
-import {
-    pintarEquipos,
-    pintarNombreLiga
-} from '../view/equiposView.js';
+import { pintarEquipos, pintarNombreLiga, pintarEstadisticasEquipo} from '../view/equiposView.js';
 
 import { ejecutarConCarga } from '../view/cargaView.js';
-
 
 // CONTENEDOR DE EQUIPOS
 
@@ -35,7 +31,6 @@ export function iniciarEquipos() {
 
         contenedorEquipos.textContent =
             'No se ha especificado una liga o temporada válida.';
-
         return;
     }
 
@@ -55,7 +50,7 @@ export function iniciarEquipos() {
 
     .then(function(equipos) {
 
-        pintarEquipos(equipos, contenedorEquipos);
+        pintarEquipos(equipos, contenedorEquipos, seleccionarEquipo);
 
     })
 
@@ -68,4 +63,20 @@ export function iniciarEquipos() {
 
     });
 
+}
+
+function seleccionarEquipo(equipo) {
+    console.log('Equipo seleccionado:', equipo);
+    console.log('Liga:', liga);
+    console.log('Temporada:', temporada);
+
+    ejecutarConCarga(function() {
+        return obtenerEstadisticasEquipo(liga, temporada, equipo.teamId);
+    })
+    .then(function(estadisticas) {
+        pintarEstadisticasEquipo(estadisticas);
+    })
+    .catch(function(error) {
+        console.log('Error al obtener estadísticas:', error);
+    });
 }

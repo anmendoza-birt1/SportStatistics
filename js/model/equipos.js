@@ -24,3 +24,24 @@ export function obtenerEquipos(liga, temporada) {
         });
 
 }
+
+export function obtenerEstadisticasEquipo(liga, temporada, idEquipo) {
+
+    let url = 'https://api.openligadb.de/getbltable/' +
+        encodeURIComponent(liga) + '/' +
+        encodeURIComponent(temporada);
+
+    return fetch(url)
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Error al consultar las estadísticas');
+            }
+
+            return response.json();
+        })
+        .then(function(clasificacion) {
+            return clasificacion.find(function(equipo) {
+                return equipo.teamInfoId === idEquipo;
+            });
+        });
+}
